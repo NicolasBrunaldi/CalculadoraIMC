@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="tabela_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="peso_baixo_style" parent="tabela_style">
+        <item name="android:background">@color/amarelo</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="peso_normal_style" parent="tabela_style">
+        <item name="android:background">@color/verde</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="sobre_peso_style" parent="tabela_style">
+        <item name="android:background">@color/laranja_alerta</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="obesidade_1_style" parent="tabela_style">
+        <item name="android:background">@color/rosa_salmao</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="obesidade_2_style.style" parent="tabela_style">
+        <item name="android:background">@color/vermelho_claro</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="obesidade_3_style" parent="tabela_style">
+        <item name="android:background">@color/vermelho</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="EDT_style">
+        <item name="android:layout_width">250dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColorHint">@color/black</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+</resources>

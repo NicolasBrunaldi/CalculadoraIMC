@@ -4,15 +4,194 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+
+    >
 
     <TextView
+        android:id="@+id/titleIMC_EDT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="72dp"
+        android:text="@string/imc_TXT"
+        android:textSize="48sp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    
+    <EditText
+        android:id="@+id/nome_EDT"
+        android:layout_marginTop="50dp"
+        android:inputType="textPersonName"
+        android:hint="Digite seu nome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleIMC_EDT"
+        style="@style/EDT_style" />
+
+    <EditText
+        android:id="@+id/peso_EDT"
+        android:layout_marginTop="30dp"
+        style="@style/EDT_style"
+        android:ems="10"
+        android:hint="@string/peso_hint"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nome_EDT" />
+
+    <EditText
+        android:id="@+id/altura_EDT"
+        android:layout_marginTop="30dp"
+        style="@style/EDT_style"
+        android:ems="10"
+        android:hint="@string/altura_hint"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/peso_EDT" />
+
+    <Button
+        android:id="@+id/calcularButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/calcular_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/altura_EDT" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/resultado_grupo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:constraint_referenced_ids="tabelaImcObesidade1,tabelaImcObesidade2,tabelaImcObesidade3, tabelaImcPesoBaixo, tabelaImcPesoNormal, tabelaImcSobrePeso, ValorImcObesidade1,valorImcObesidade2,valorImcObesidade3,valorImcPesoBaixo,ValorImcPesoNormal,ValorImcSobrePeso"
+        />
+    <TextView
+        android:id="@+id/tabelaImcObesidade3"
+        android:text="@string/obesidade_grau_3"
+        style="@style/obesidade_3_style"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2" />
+
+    <TextView
+        android:id="@+id/tabelaImcObesidade2"
+        android:text="@string/obesidade_grau_2"
+        style="@style/obesidade_2_style.style"
+        app:layout_constraintBottom_toTopOf="@+id/tabelaImcObesidade3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2" />
+
+    <TextView
+        android:id="@+id/tabelaImcObesidade1"
+        android:text="@string/obesidade_grau_1"
+        style="@style/obesidade_1_style"
+        app:layout_constraintBottom_toTopOf="@+id/tabelaImcObesidade2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2" />
+
+    <TextView
+        android:id="@+id/tabelaImcSobrePeso"
+        android:text="@string/sobrepeso"
+        style="@style/sobre_peso_style"
+        app:layout_constraintBottom_toTopOf="@+id/tabelaImcObesidade1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2" />
+
+    <TextView
+        android:id="@+id/tabelaImcPesoNormal"
+        android:text="@string/peso_normal"
+        style="@style/peso_normal_style"
+        app:layout_constraintBottom_toTopOf="@+id/tabelaImcSobrePeso"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2" />
+
+    <TextView
+        android:id="@+id/tabelaImcPesoBaixo"
+        android:text="@string/peso_baixo"
+        style="@style/peso_baixo_style"
+        app:layout_constraintBottom_toTopOf="@+id/tabelaImcPesoNormal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2" />
+
+    <TextView
+        android:id="@+id/resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tabelaImcPesoBaixo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calcularButton" />
+
+
+
+    <TextView
+        android:id="@+id/valorImcObesidade3"
+        android:text="@string/valor_imc_obesidade_3"
+        style="@style/obesidade_3_style"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tabelaImcObesidade3"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/valorImcObesidade2"
+        android:text="@string/valor_imc_obesidade_2"
+        app:layout_constraintBottom_toTopOf="@+id/valorImcObesidade3"
+        app:layout_constraintEnd_toStartOf="@+id/tabelaImcObesidade2"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/obesidade_2_style.style"/>
+
+    <TextView
+        android:id="@+id/ValorImcObesidade1"
+        android:text="@string/valor_imc_obesidade_1"
+        app:layout_constraintBottom_toTopOf="@+id/valorImcObesidade2"
+        app:layout_constraintEnd_toStartOf="@+id/tabelaImcObesidade1"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/obesidade_1_style"/>
+
+    <TextView
+        android:id="@+id/ValorImcPesoNormal"
+        android:text="@string/valor_imc_peso_normal"
+        app:layout_constraintBottom_toTopOf="@+id/ValorImcSobrePeso"
+        app:layout_constraintEnd_toStartOf="@+id/tabelaImcPesoNormal"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/peso_normal_style"/>
+
+    <TextView
+        android:id="@+id/ValorImcSobrePeso"
+        android:text="@string/valor_imc_sobrepeso"
+        app:layout_constraintBottom_toTopOf="@+id/ValorImcObesidade1"
+        app:layout_constraintEnd_toStartOf="@+id/tabelaImcSobrePeso"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/sobre_peso_style"/>
+
+    <TextView
+        android:id="@+id/valorImcPesoBaixo"
+        android:text="@string/valor_imc_peso_baixo"
+        app:layout_constraintBottom_toTopOf="@+id/ValorImcPesoNormal"
+        app:layout_constraintEnd_toStartOf="@+id/tabelaImcPesoBaixo"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/peso_baixo_style" />
+
+    
 
 </androidx.constraintlayout.widget.ConstraintLayout>

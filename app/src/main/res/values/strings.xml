@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">CalculadoraIMC</string>
+    <string name="imc_TXT">IMC</string>
+    <string name="altura_hint">altura ex: (1,75m)</string>
+    <string name="peso_hint">Peso ex: (78,5kg)</string>
+    <string name="calcular_button">Calcular</string>
+    <string name="peso_baixo">Peso Baixo</string>
+    <string name="peso_normal">Peso normal</string>
+    <string name="sobrepeso">Sobrepeso</string>
+    <string name="obesidade_grau_1">Obesidade (Grau I)</string>
+    <string name="obesidade_grau_2">Obesidade (Grau II)</string>
+    <string name="valor_imc_peso_baixo"><![CDATA[< 18,5]]></string>
+    <string name="valor_imc_peso_normal">18,5 - 24,9</string>
+    <string name="valor_imc_sobrepeso">25,0 - 29,0</string>
+    <string name="valor_imc_obesidade_1">30,0 - 34,9</string>
+    <string name="valor_imc_obesidade_2">35,0 - 39,9</string>
+    <string name="valor_imc_obesidade_3">≥ 40,0</string>
+    <string name="obesidade_grau_3">Obesidade (Grau 3)</string>
 </resources>
