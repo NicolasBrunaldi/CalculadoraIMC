@@ -8,6 +8,7 @@ Receber a altura e peso;
 Apresentar via botão o resultado para o usuário.
 
 Pontos q eu acrescentei e personalizei:
+
 Coloquei um campo para receber o nome do usuário;
 
 Uma tabela colorida com valores de imc para comparar se o seu está dentro do ideal, que é exibido junto do resultado após apertar o botão;
