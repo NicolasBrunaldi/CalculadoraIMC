@@ -14,12 +14,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        try {
-            calcularButton.setOnClickListener(){
-                val usuario = Pessoa(nome = nome_EDT.text.toString(), altura = altura_EDT.text.toString().toDouble(), peso = peso_EDT.text.toString().toDouble())
-                calculaEexibeIMC(usuario)
-                Snackbar.make(findViewById(R.id.mainActivity,), "Preencha os campos corretamente", Snackbar.LENGTH_SHORT).show()}
-        }catch (e: NumberFormatException){
+        calcularButton.setOnClickListener(){
+            try {
+
+                    val usuario = Pessoa(nome = nome_EDT.text.toString(), altura = altura_EDT.text.toString().toDouble(), peso = peso_EDT.text.toString().toDouble())
+                    calculaEexibeIMC(usuario)
+                    }catch (e: Exception){
+                    Snackbar.make(findViewById(R.id.mainActivity,), "Preencha os campos corretamente", Snackbar.LENGTH_SHORT).show()
+                }
 
         }
 
