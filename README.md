@@ -1,13 +1,13 @@
 # CalculadoraIMC
 Atividade Proposta pela DIO(Digital Inovation One) leia o readme para uma descrição detalhada
 
-Requisitos da atividade:
+REQUISITOS DA ATIVIDADE:
 
 Receber a altura e peso;
 
 Apresentar via botão o resultado para o usuário.
 
-Pontos q eu acrescentei e personalizei:
+PONTOS QUE EU PERSONALIZEI:
 
 Coloquei um campo para receber o nome do usuário;
 
